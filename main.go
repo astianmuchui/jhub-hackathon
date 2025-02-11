@@ -20,5 +20,6 @@ func main() {
 
 	app.Get("/", handlers.HomeHandler)
 
+	app.Static("/assets", "./assets")
 	app.Listen(":8080")
 }

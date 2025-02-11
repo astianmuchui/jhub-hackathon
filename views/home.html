@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../assets/css/style.css" class="">
+        <link href="https://fonts.bunny.net/css2?family=Poppins" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+        <title>Afueni</title>
+    </head>
+
+    <body class="antialiased bg-white m-0 p-0 box-border overflow-x-hidden">
+        <main class=" h-screen w-full relative    "
+            style="clip-path: polygon(50% 0%, 100% 0, 100% 60%, 50% 100%, 0 100%, 0 0);">
+            <header class="w-full h-14 px-12  py-1  inline-flex justify-between z-[990]">
+                <div class="title h-full w-1/5  flex flex-col justify-center content-center items-center">
+                    <h1 class="text-3xl bg-clip-text text-white font-bold">Afueni</h1>
+                </div>
+                <nav class="w-2/5 ">
+                    <ul class="flex justify-around h-full items-center">
+                        <li><a href="#home" class="text-sm text-white hover:text-orange-700">Home</a></li>
+                        <li><a href="#about" class="text-sm text-white hover:text-orange-700">About</a></li>
+                        <li><a href="#services" class="text-sm text-white hover:text-orange-700">Services</a></li>
+                        <li><a href="#contact" class="text-sm text-white hover:text-orange-700">Contact</a></li>
+                    </ul>
+                </nav>
+                <button
+                    class="cta h-12 w-max px-4 mt-1  flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white/90 hover:bg-gradient-to-tr rounded-full my-auto ">
+                    <a href="#cta" class="text-md text-black  py-1 px-2 rounded-full">Get Started</a>
+                </button>
+            </header>
+
+
+            <div
+                class="hero-section w-full mx-auto h-full relative  z-30   flex flex-col items-center content-center justify-center">
+
+                <div class="w-10/12 h-full   px-2.5   grid grid-cols-2 place-items-center ">
+                    <div class=" h-full  w-full  py-12 flex flex-col justify-center content-center ">
+                        <h1 class="text-[4.5vw]  text-white font-extrabold ">The Easiest way to detect cancer in your
+                            browser</h1>
+                        <p class="text-lg text-white my-8">Using our AI powered techniques and computer vision
+                            algorithms, you can easily and quickly detect cancerous cells with high accuracy.</p>
+                        <button
+                            class="cta h-12 w-max px-4 mt-1  flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white/90 hover:bg-gradient-to-tr rounded-full my-auto ">
+                            <a href="#cta" class="text-md text-black  py-1 px-2 rounded-full">Get Started</a>
+                        </button>
+                    </div>
+                    <div class="w-full h-full py-12 flex flex-col relative  z-20 ">
+                        <img src="../assets/img/mockup.png" alt=""
+                            class="relative z-30 transition-all transform scale-[1.45] inset-0  rotate-[5deg]">
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+        <section
+            class="h-screen flex flex-col items-center w-full content-center pt-12  p-6 bg-gradient-to-bl from-white via-sky-50 to-pink-200 ">
+            <h1 class="text-5xl text-black/90 font-extrabold">Unmatched <span
+                    class="bg-gradient-to-tr from-sky-400 to-sky-600 text-transparent bg-clip-text">Precision</span>
+            </h1>
+            <p class="text-black w-1/2 my-2 text-md ">Our carefully crafted AI mechanisms ensure unparalleled accuracy
+                in detecting cancerous cells, providing you with reliable results every time.</p>
+
+            <img src="../assets/img/mockup_scan.png" alt=""
+                class="h-3/4 my-12  dance  relative  transition-all transform scale-[1.05] inset-0  rotate-[-10deg]">
+        </section>
+        <section
+            class="h-screen flex flex-col items-center w-full content-center pt-12  p-6 bg-gradient-to-br from-white via-white to-white/60">
+            <h1 class="text-4xl text-black/90 font-extrabold">From The <span
+                    class="bg-gradient-to-tr from-pink-500 to-pink-600 text-transparent bg-clip-text">Numbers</span>
+            </h1>
+
+            <div class="w-10/12 shadow-inner h-4/5 rounded-2xl mt-9 pulse  grid grid-cols-2 gap-4 p-3">
+                <canvas id="late-stages-chart" class="w-full h-full"></canvas>
+                <div class="w-full flex flex-col justify-center p-4">
+                    <h1 class="text-5xl  text-black/90 font-extrabold tracking-wide leading-12 ">The prevalence of <span
+                            class="bg-gradient-to-tr from-rose-500 to-rose-800 text-transparent bg-clip-text">late stage
+                            presentation</span> of cervical cancer <br>
+                        <span
+                            class="bg-gradient-to-tr from-sky-400 to-sky-600 text-transparent bg-clip-text">ALONE</span>
+
+                    </h1>
+
+                </div>
+            </div>
+        </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById('late-stages-chart').getContext('2d');
+            const lateStagesChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Africa', 'Asia', 'Europe', 'North America'],
+                    datasets: [{
+                        label: 'Prevalence of Late-Stage Presentation (%)',
+                        data: [62.60, 69.30, 46.51, 50.16],
+                        backgroundColor: [
+                            'rgba(255, 99, 132)',
+                            'rgba(54, 162, 235)',
+                            'rgba(255, 206, 86)',
+                            'rgba(75, 192, 192)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                usePointStyle: true,
+                                pointStyle: 'circle',
+                                padding: 20
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += context.raw + '%';
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+
+</html>
