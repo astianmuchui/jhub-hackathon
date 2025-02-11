@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../assets/css/style.css" class="">
         <link href="https://fonts.bunny.net/css2?family=Poppins" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <style>
             body {
                 font-family: 'Poppins', sans-serif;
@@ -14,7 +15,7 @@
         <title>Afueni</title>
     </head>
 
-    <body class="antialiased bg-white m-0 p-0 box-border overflow-x-hidden">
+    <body class="antialiased bg-white m-0 p-0 box-border overflow-x-hidden scroll-smooth">
         <main class=" h-screen w-full relative    "
             style="clip-path: polygon(50% 0%, 100% 0, 100% 60%, 50% 100%, 0 100%, 0 0);">
             <header class="w-full h-14 px-12  py-1  inline-flex justify-between z-[990]">
@@ -31,7 +32,7 @@
                 </nav>
                 <button
                     class="cta h-12 w-max px-4 mt-1  flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white/90 hover:bg-gradient-to-tr rounded-full my-auto ">
-                    <a href="#cta" class="text-md text-black  py-1 px-2 rounded-full">Get Started</a>
+                    <a href="#" class="text-md text-black  py-1 px-2 rounded-full">Get Started</a>
                 </button>
             </header>
 
@@ -41,14 +42,13 @@
 
                 <div class="w-10/12 h-full   px-2.5   grid grid-cols-2 place-items-center ">
                     <div class=" h-full  w-full  py-12 flex flex-col justify-center content-center ">
-                        <h1 class="text-[4.5vw]  text-white font-extrabold ">The Easiest way to detect cancer in your
-                            browser</h1>
+                        <h1 class="text-[4.5vw]  text-white font-extrabold ">The Easiest way to diagnose cancer</h1>
                         <p class="text-lg text-white my-8">Using our AI powered techniques and computer vision
                             algorithms, you can easily and quickly detect cancerous cells with high accuracy.</p>
-                        <button
-                            class="cta h-12 w-max px-4 mt-1  flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white/90 hover:bg-gradient-to-tr rounded-full my-auto ">
-                            <a href="#cta" class="text-md text-black  py-1 px-2 rounded-full">Get Started</a>
-                        </button>
+                        <a href="#"
+                            class="cta h-12 w-max px-8 mt-1  flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white/90 hover:bg-gradient-to-tr rounded-full my-auto ">
+                            Get Started
+                        </a>
                     </div>
                     <div class="w-full h-full py-12 flex flex-col relative  z-20 ">
                         <img src="../assets/img/mockup.png" alt=""
@@ -59,27 +59,17 @@
             </div>
 
         </main>
-        <section
-            class="h-screen flex flex-col items-center w-full content-center pt-12  p-6 bg-gradient-to-bl from-white via-sky-50 to-pink-200 ">
-            <h1 class="text-5xl text-black/90 font-extrabold">Unmatched <span
-                    class="bg-gradient-to-tr from-sky-400 to-sky-600 text-transparent bg-clip-text">Precision</span>
-            </h1>
-            <p class="text-black w-1/2 my-2 text-md ">Our carefully crafted AI mechanisms ensure unparalleled accuracy
-                in detecting cancerous cells, providing you with reliable results every time.</p>
 
-            <img src="../assets/img/mockup_scan.png" alt=""
-                class="h-3/4 my-12  dance  relative  transition-all transform scale-[1.05] inset-0  rotate-[-10deg]">
-        </section>
         <section
-            class="h-screen flex flex-col items-center w-full content-center pt-12  p-6 bg-gradient-to-br from-white via-white to-white/60">
+            class="h-[130vh] max-h-max  flex flex-col items-center w-full content-center pt-12  p-6 bg-gradient-to-br from-white via-white to-white/60">
             <h1 class="text-4xl text-black/90 font-extrabold">From The <span
                     class="bg-gradient-to-tr from-pink-500 to-pink-600 text-transparent bg-clip-text">Numbers</span>
             </h1>
 
-            <div class="w-10/12 shadow-inner h-4/5 rounded-2xl mt-9 pulse  grid grid-cols-2 gap-4 p-3">
-                <canvas id="late-stages-chart" class="w-full h-full"></canvas>
-                <div class="w-full flex flex-col justify-center p-4">
-                    <h1 class="text-5xl  text-black/90 font-extrabold tracking-wide leading-12 ">The prevalence of <span
+            <div class="w-11/12 shadow-inner h-3/4 rounded-2xl mt-7  pulse  grid grid-cols-2 gap-4 p-3 mb-5">
+                <canvas id="late-stages-chart" class="w-full h-full p-6"></canvas>
+                <div class="w-full flex flex-col justify-center p-6">
+                    <h1 class="text-5xl  text-black/90 font-extrabold tracking-wide leading-20 ">The prevalence of <span
                             class="bg-gradient-to-tr from-rose-500 to-rose-800 text-transparent bg-clip-text">late stage
                             presentation</span> of cervical cancer <br>
                         <span
@@ -89,9 +79,63 @@
 
                 </div>
             </div>
+
+            <a href="#"
+                class="shadow-3xl shadow-gray-200 cta h-14 w-max px-8 py-4 my-10   flex flex-col justify-center content-center items-center bg-gradient-to-tr to-primaryPink from-lightBlue hover:bg-gradient-to-r rounded-full my-auto text-white">
+                Get Started
+            </a>
         </section>
 
+        <section
+            class="min-h-screen max-h-max pb-14 w-full bg-black/95  flex flex-col items-center w-full content-center pt-12  p-6">
+            <h1 class="text-5xl font-extrabold bg-gradient-to-tr from-white to-sky-600 text-transparent bg-clip-text">
+                In four easy steps
+            </h1>
+                <video src="../assets/img/mri_video.mp4" muted autoplay loop width="90%"  class="w-9/12 h-3/4 mt-14 rounded-2xl object-cover video-bg "></video>
 
+            <div class="w-9/12 mt-20  grid grid-cols-2 gap-8 ">
+                <div class="flex flex-col items-start">
+                    <i class="text-4xl mb-4font-bold bg-gradient-to-tr from-white to-sky-600 text-transparent bg-clip-text fas fa-upload"></i>
+                    <h2 class="text-2xl my-4  text-white font-bold"><span class="text-sky-400">Upload MRI Scans</span></h2>
+                    <p class="text-white">Doctors upload patient MRI scans to the Afueni platform.</p>
+                </div>
+                <div class="flex flex-col items-start">
+                    <i class="text-4xl mb-4font-bold bg-gradient-to-tr from-white to-pink-600 text-transparent bg-clip-text fas fa-brain"></i>
+                    <h2 class="text-2xl my-4  text-white font-bold"><span class="text-sky-400">AI Analysis</span></h2>
+                    <p class="text-white">Our AI analyzes the scans using advanced computer vision algorithms to detect abnormalities.</p>
+                </div>
+                <div class="flex flex-col items-start">
+                    <i class="text-4xl mb-4font-bold bg-gradient-to-tr from-white to-sky-600 text-transparent bg-clip-text fas fa-file-medical-alt"></i>
+                    <h2 class="text-2xl my-4  text-white font-bold"><span class="text-sky-400">Generate Report</span></h2>
+                    <p class="text-white">Afueni generates a detailed report highlighting potential cancer cells and their locations.</p>
+                </div>
+                <div class="flex flex-col items-start">
+                    <i class="text-4xl mb-4font-bold bg-gradient-to-tr from-white to-pink-600 text-transparent bg-clip-text fas fa-walking"></i>
+                    <h2 class="text-2xl my-4  text-white font-bold"><span class="text-sky-400">Take Action</span></h2>
+                    <p class="text-white">Doctors use the insights to plan treatment or further diagnostics.</p>
+                </div>
+            </div>
+                    <a href="#"
+                        class="shadow-3xl shadow-gray-200 cta h-14 w-max px-8 py-4 mt-20   flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white hover:bg-gradient-to-r rounded-full my-auto text-black">
+                        Get Started
+                    </a>
+        </section>
+        <section
+            class="h-[120vh]  flex flex-col items-center w-full content-center pt-12  p-6 bg-gradient-to-bl from-white via-sky-50 to-pink-100 ">
+            <h1 class="text-5xl text-black/90 font-extrabold">Unmatched <span
+                    class="bg-gradient-to-tr from-sky-400 to-sky-600 text-transparent bg-clip-text">Precision</span>
+            </h1>
+            <p class="text-black w-1/2 my-2 text-md ">Our carefully crafted AI mechanisms ensure unparalleled accuracy
+                in detecting cancerous cells, providing you with reliable results every time.</p>
+
+            <img src="../assets/img/mockup_scan.png" alt=""
+                class="h-1/2 mt-10  dance  relative  transition-all transform scale-[1.05] inset-0  rotate-[-10deg]">
+
+            <a href="#"
+                class="shadow-3xl shadow-gray-200 cta h-14 w-max px-8 py-4 mt-10   flex flex-col justify-center content-center items-center bg-gradient-to-bl from-sky-500 to-darkBlue hover:bg-gradient-to-r rounded-full my-auto text-white">
+                Get Started
+            </a>
+        </section>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             const ctx = document.getElementById('late-stages-chart').getContext('2d');
