@@ -99,16 +99,17 @@ main {
 }
 
 .dance {
-	animation: dance 20s infinite;
+	animation: dance 10s cubic-bezier(0.86, 0, 0.07, 1) infinite;
 }
 
 @keyframes dance {
 	0%, 100% {
-		transform: rotate(0deg);
+		transform: scale(0.95);
 	}
 
 	50% {
-		transform: rotate(10deg) translateX(10px);
+		transform: scale(1.1);
+
 	}
 }
 
