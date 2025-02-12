@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 flask = "*"
 tensorflow = "*"
+flask-cors = "*"
+pillow = "*"
 
 [dev-packages]
 
