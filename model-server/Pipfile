@@ -8,6 +8,8 @@ flask = "*"
 tensorflow = "*"
 flask-cors = "*"
 pillow = "*"
+python-dotenv = "*"
+openai = "*"
 
 [dev-packages]
 
