@@ -3,3 +3,5 @@ tensorflow
 flask-cors
 pillow
 gunicorn
+python-dotenv
+openai
