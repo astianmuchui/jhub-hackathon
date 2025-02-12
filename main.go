@@ -19,6 +19,7 @@ func main() {
 	app.Use(logger.New())
 
 	app.Get("/", handlers.HomeHandler)
+	app.Get("/upload", handlers.UploadHandler)
 
 	app.Static("/assets", "./assets")
 	app.Listen(":8080")

@@ -7,3 +7,7 @@ import (
 func HomeHandler(c *fiber.Ctx) error {
 	return c.Render("home", fiber.Map{})
 }
+
+func UploadHandler(c *fiber.Ctx) error {
+	return c.Render("upload", fiber.Map{})
+}
