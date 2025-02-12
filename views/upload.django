@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://astianmuchui.github.io/jhub-hackathon/assets/css/style.css" class="">
+        <link rel="stylesheet" href="../assets/css/style.css" class="">
+        <link href="https://fonts.bunny.net/css2?family=Poppins" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+        <title>Afueni</title>
+    </head>
+
+    <body class="antialiased bg-white m-0 p-0 box-border overflow-x-hidden scroll-smooth">
+        <div
+            class="w-full h-screen  bg-gradient-to-bl from-white via-sky-200 to-pink-200 flex flex-col justify-center items-center content-center align-middle p-8">
+            <div
+                class="w-1/2  h-4/5 rounded-3xl shadow-2xl bg-gradient-to-tl transition duration-700 ease-out  hover:bg-gradient-to-br flex flex-col justify-center p-6">
+                <form action="/upload-file" method="post" class="w-full h-1/2 p-3" enctype="multipart/form-data">
+                    <h1 class="text-3xl  text-darkBlue font-bold antialiased tracking-wide my-3">Upload an MRI Scan</h1>
+
+                    <input
+                        class="block w-1/2 text-sm text-gray-900 border-gray-300 rounded-lg cursor-pointer bg-gray-50 my-8"
+                        aria-describedby="file_input_help" id="file_input" type="file" name="image" accept="image/*">
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF
+                        (MAX. 800x400px).</p>
+
+                    <button type="submit"
+                        class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-8 rounded my-4 ">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div id="modal" class="z-10
+            {% if not responseExists %}
+            hidden
+            {% endif %}
+            fixed inset-0 bg-black/60 top-0 right-0 left-0 w-screen h-screen flex flex-col justify-center items-center"
+            style="backdrop-filter: blur(5px);">
+
+            <div class="w-2/5 h-3/4 bg-white rounded-xl p-6 bg-gradient-to-bl from-white
+                    {% if response.predicted_label != 'normal' %}
+                        via-red-400 to-white
+                    {% else %}
+                        via-emerald-200 to-white
+                    {% endif %}">
+                <div class="w-full inline-flex justify-between">
+                    <h1 class="text-3xl  text-darkBlue font-bold antialiased tracking-wide my-3">Results</h1>
+                    <span class="text-3xl  flex flex-col justify-center cursor-pointer " id="close">&times;</span>
+                </div>
+                <div class="w-3/4 h-1/4 inline-flex justify-between content-center p-2">
+                    <h1 class="text-xl  text-darkBlue font-bold antialiased tracking-wide my-auto">Inference</h1>
+                    <span class="px-4 py-2 ml-2
+                        {% if response.predicted_label != 'normal' %}
+                            text-red-100
+                            bg-red-600
+                        {% else %}
+                            text-emerald-100
+                            bg-emerald-600
+                        {% endif %}
+            rounded-full h-max  my-auto">{{ response.predicted_label }}</span>
+                </div>
+                <div class="w-2/3  h-1/4 inline-flex justify-between content-center p-2 my-6">
+                    <h1 class="text-xl  text-darkBlue font-bold antialiased tracking-wide my-auto">Accuracy</h1>
+                    <span
+                        class="px-6 py-2 text-darkBlue font-extrabold text-4xl transform rotate-[-3deg]  rounded-full h-max  my-auto">{{ response.confidence|floatformat:2 }}%</span>
+                </div>
+                <div class="h-1/4 flex flex-col justify-center p-2">
+                    <a href="/upload/"
+                        class="bg-gray-900 hover:bg-gray-800 px-6 py-2 w-max text-white rounded-full h-max  my-auto">
+                        <i class="fas fa-upload text-white mr-4"></i> Upload another</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            let modal = document.getElementById("modal")
+            let close = document.getElementById("close")
+
+            close.addEventListener("click", toggleModal)
+
+            function toggleModal() {
+                modal.classList.toggle("hidden")
+            }
+        </script>
+    </body>
+
+</html>

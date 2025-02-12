@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	engine := django.New("./views", ".html")
+	engine := django.New("./views", ".django")
 
 	app := fiber.New(fiber.Config{
 		Views: engine,
@@ -20,6 +20,7 @@ func main() {
 
 	app.Get("/", handlers.HomeHandler)
 	app.Get("/upload", handlers.UploadHandler)
+	app.Post("upload-file", handlers.FileUploadHandler)
 
 	app.Static("/assets", "./assets")
 	app.Listen(":8080")
