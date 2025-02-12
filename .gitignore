@@ -3,3 +3,7 @@ node_modules/
 # Ignore ML models 
 model-server/models
 
+# Ignore .env files
+.env
+
+model-server/.env
