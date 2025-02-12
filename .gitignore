@@ -1,1 +1,5 @@
 node_modules/
+
+# Ignore ML models 
+model-server/models
+
