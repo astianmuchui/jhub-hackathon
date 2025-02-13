@@ -46,7 +46,7 @@
             fixed inset-0 bg-black/60 top-0 right-0 left-0 w-screen h-screen flex flex-col justify-center items-center"
             style="backdrop-filter: blur(5px);">
 
-            <div class="w-2/5 h-3/4 bg-white rounded-xl p-6 bg-gradient-to-bl from-white
+            <div class="w-3/5 h-[90%] bg-white rounded-xl p-6 bg-gradient-to-bl from-white
                     {% if response.predicted_label != 'normal' %}
                         via-red-400 to-white
                     {% else %}
@@ -56,9 +56,9 @@
                     <h1 class="text-3xl  text-darkBlue font-bold antialiased tracking-wide my-3">Results</h1>
                     <span class="text-3xl  flex flex-col justify-center cursor-pointer " id="close">&times;</span>
                 </div>
-                <div class="w-3/4 h-1/4 inline-flex justify-between content-center p-2">
+                <div class="w-2/3 h-1/12 inline-flex justify-between content-center p-2">
                     <h1 class="text-xl  text-darkBlue font-bold antialiased tracking-wide my-auto">Inference</h1>
-                    <span class="px-4 py-2 ml-2
+                    <span class="px-4 py-2 ml-2 my-auto
                         {% if response.predicted_label != 'normal' %}
                             text-red-100
                             bg-red-600
@@ -68,12 +68,15 @@
                         {% endif %}
             rounded-full h-max  my-auto">{{ response.predicted_label }}</span>
                 </div>
-                <div class="w-2/3  h-1/4 inline-flex justify-between content-center p-2 my-6">
+                <div class="w-2/3  h-1/12 inline-flex justify-between content-center p-2 my-4">
                     <h1 class="text-xl  text-darkBlue font-bold antialiased tracking-wide my-auto">Accuracy</h1>
                     <span
                         class="px-6 py-2 text-darkBlue font-extrabold text-4xl transform rotate-[-3deg]  rounded-full h-max  my-auto">{{ response.confidence|floatformat:2 }}%</span>
                 </div>
-                <div class="h-1/4 flex flex-col justify-center p-2">
+                <div class="w-full h-2/5 max-h-2/3 antialiased font-medium tracking-wide text-sm text-gray-900 overflow-auto p-2 ">
+                    {{ response.explanation }}
+                </div>
+                <div class="h-1/12 flex flex-col justify-center p-2 my-3">
                     <a href="/upload/"
                         class="bg-gray-900 hover:bg-gray-800 px-6 py-2 w-max text-white rounded-full h-max  my-auto">
                         <i class="fas fa-upload text-white mr-4"></i> Upload another</a>

@@ -33,7 +33,7 @@
                 </nav>
                 <button
                     class="cta h-12 w-max px-4 mt-1  flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white/90 hover:bg-gradient-to-tr rounded-full my-auto ">
-                    <a href="#" class="text-md text-black  py-1 px-2 rounded-full">Get Started</a>
+                    <a href="/upload" class="text-md text-black  py-1 px-2 rounded-full">Get Started</a>
                 </button>
             </header>
 
@@ -46,7 +46,7 @@
                         <h1 class="text-[4.5vw]  text-white font-extrabold ">The Easiest way to diagnose cancer</h1>
                         <p class="text-lg text-white my-8">Using our AI powered techniques and computer vision
                             algorithms, you can easily and quickly detect cancerous cells with high accuracy.</p>
-                        <a href="#"
+                        <a href="/upload"
                             class="cta h-12 w-max px-8 mt-1  flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white/90 hover:bg-gradient-to-tr rounded-full my-auto ">
                             Get Started
                         </a>
@@ -81,7 +81,7 @@
                 </div>
             </div>
 
-            <a href="#"
+            <a href="/upload"
                 class="shadow-3xl shadow-gray-200 cta h-14 w-max px-8 py-4 my-10   flex flex-col justify-center content-center items-center bg-gradient-to-tr to-primaryPink from-lightBlue hover:bg-gradient-to-r rounded-full my-auto text-white">
                 Get Started
             </a>
@@ -116,7 +116,7 @@
                     <p class="text-white">Doctors use the insights to plan treatment or further diagnostics.</p>
                 </div>
             </div>
-                    <a href="#"
+                    <a href="/upload"
                         class="shadow-3xl shadow-gray-200 cta h-14 w-max px-8 py-4 mt-20   flex flex-col justify-center content-center items-center bg-gradient-to-bl from-white to-white hover:bg-gradient-to-r rounded-full my-auto text-black">
                         Get Started
                     </a>
@@ -132,7 +132,7 @@
             <img src="../assets/img/mockup_scan.png" alt=""
                 class="h-1/2 mt-10  relative  transition-all transform scale-[1.01] inset-0 dance">
 
-            <a href="#"
+            <a href="/upload"
                 class="shadow-3xl shadow-gray-200 cta h-14 w-max px-8 py-4 mt-10   flex flex-col justify-center content-center items-center bg-gradient-to-bl from-sky-500 to-darkBlue hover:bg-gradient-to-r rounded-full my-auto text-white">
                 Get Started
             </a>
