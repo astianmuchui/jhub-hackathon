@@ -17,18 +17,18 @@
     </head>
 
     <body class="antialiased bg-white m-0 p-0 box-border overflow-x-hidden scroll-smooth">
-        <main class=" h-screen w-full relative    "
+        <main class=" h-screen w-full relative   z-1 "
             style="clip-path: polygon(50% 0%, 100% 0, 100% 60%, 50% 100%, 0 100%, 0 0);">
-            <header class="w-full h-14 px-12  py-1  inline-flex justify-between z-[990]">
+            <header class="w-full h-14 px-12  py-1  inline-flex  z-[999]">
                 <div class="title h-full w-1/5  flex flex-col justify-center content-center items-center">
                     <h1 class="text-3xl bg-clip-text text-white font-bold">Afueni</h1>
                 </div>
-                <nav class="w-2/5 ">
+                <nav class="w-3/5 ">
                     <ul class="flex justify-around h-full items-center">
-                        <li><a href="#home" class="text-sm text-white hover:text-orange-700">Home</a></li>
-                        <li><a href="#about" class="text-sm text-white hover:text-orange-700">About</a></li>
-                        <li><a href="#services" class="text-sm text-white hover:text-orange-700">Services</a></li>
-                        <li><a href="#contact" class="text-sm text-white hover:text-orange-700">Contact</a></li>
+                        <li><a href="#home" class="text-sm text-white mx-3 ">Home</a></li>
+                        <li><a href="#about" class="text-sm text-white mx-3 ">Why Afueni</a></li>
+                        <li><a href="#services" class="text-sm text-white mx-3 ">How it works</a></li>
+ 
                     </ul>
                 </nav>
                 <button
@@ -51,9 +51,9 @@
                             Get Started
                         </a>
                     </div>
-                    <div class="w-full h-full py-12 flex flex-col relative  z-20 ">
+                    <div class="w-full h-full py-12 flex flex-col relative  ">
                         <img src="../assets/img/mockup.png" alt=""
-                            class="relative z-30 transition-all transform scale-[1.45] inset-0  rotate-[5deg]">
+                            class="relative z-[-1]  transition-all transform scale-[1.45] inset-0  rotate-[5deg]">
                     </div>
                 </div>
 

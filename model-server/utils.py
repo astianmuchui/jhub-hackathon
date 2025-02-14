@@ -23,20 +23,20 @@ def preprocess_image(image_bytes: bytes) -> np.ndarray:
     """
     try:
         image = Image.open(io.BytesIO(image_bytes))
-        
+
         # Ensure image is in RGB format
         if image.mode != "RGB":
             image = image.convert("RGB")
-        
+
         # Resize the image to the expected size
         image = image.resize(IMG_SIZE)
-        
+
         # Convert the image to a numpy array and normalize pixel values to [0, 1]
         image_array = np.array(image).astype("float32") / 255.0
-        
+
         # Add a batch dimension
         image_array = np.expand_dims(image_array, axis=0)
-        
+
         return image_array
     except Exception as e:
         logging.error(f"Error preprocessing image: {str(e)}")
@@ -74,13 +74,13 @@ def get_explanation(predicted_label: str, confidence: float) -> str:
             "Maintaining regular check-ups and a healthy lifestyle can help ensure long-term lung health."
         ),
     }
-    
+
     # Get explanation based on the predicted label, or provide a generic response
     explanation = explanations.get(
         predicted_label,
         "The AI model has identified an unfamiliar category. Please consult a healthcare provider for further evaluation."
     )
-    
+
     # Format the final response with confidence level
     response = (
         f"The image analysis model has classified the chest CT scan as '{predicted_label}' "
@@ -88,5 +88,5 @@ def get_explanation(predicted_label: str, confidence: float) -> str:
         "Please note that this is not a definitive diagnosis but a general explanation to help you understand the result. "
         "Consult a medical professional for accurate diagnosis and guidance."
     )
-    
+
     return response

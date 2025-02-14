@@ -46,13 +46,13 @@
             fixed inset-0 bg-black/60 top-0 right-0 left-0 w-screen h-screen flex flex-col justify-center items-center"
             style="backdrop-filter: blur(5px);">
 
-            <div class="w-3/5 h-[90%] bg-white rounded-xl p-6 bg-gradient-to-bl from-white
+            <div class="w-3/5 h-[90%] bg-white rounded-xl p-4 bg-gradient-to-bl from-white
                     {% if response.predicted_label != 'normal' %}
                         via-red-400 to-white
                     {% else %}
                         via-emerald-200 to-white
                     {% endif %}">
-                <div class="w-full inline-flex justify-between">
+                <div class="w-full inline-flex justify-between ">
                     <h1 class="text-3xl  text-darkBlue font-bold antialiased tracking-wide my-3">Results</h1>
                     <span class="text-3xl  flex flex-col justify-center cursor-pointer " id="close">&times;</span>
                 </div>

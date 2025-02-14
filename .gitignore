@@ -6,4 +6,4 @@ model-server/models
 # Ignore .env files
 .env
 
-model-server/.env
+model-server/venv
